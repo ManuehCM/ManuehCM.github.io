@@ -1,11 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clínica de Fisioterapia — Inicio</title>
+    <meta name="description" content="Clínica de fisioterapia local — tratamientos personalizados, recuperación y bienestar.">
+    <style>
+        :root{--accent:#2b8cff;--muted:#666;--bg:#f7f9fb}
+        *{box-sizing:border-box}
+        body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#111;background:var(--bg)}
+        header{background:#fff;border-bottom:1px solid #e6eef8}
+        .container{max-width:1000px;margin:0 auto;padding:24px}
+        .nav{display:flex;align-items:center;justify-content:space-between}
+        .brand{font-weight:700;color:var(--accent);font-size:1.125rem}
+        nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+        .hero{display:flex;flex-direction:column;gap:18px;padding:48px 0}
+        .hero h1{margin:0;font-size:2rem}
+        .hero p{margin:0;color:var(--muted)}
+        .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+        .grid{display:grid;grid-template-columns:1fr;gap:24px}
+        .card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 1px 3px rgba(16,24,40,0.04)}
+        h2{margin-top:0}
+        .contact-columns{display:grid;grid-template-columns:1fr;gap:16px}
+        label{display:block;font-weight:600;margin-bottom:6px}
+        input[type=text],input[type=email],textarea{width:100%;padding:10px;border:1px solid #e6eef8;border-radius:8px}
+        textarea{min-height:120px;resize:vertical}
+        .btn{background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:8px;cursor:pointer}
+        footer{padding:24px 0;text-align:center;color:var(--muted);font-size:.9rem}
+        @media(min-width:800px){.hero{flex-direction:row;align-items:center;justify-content:space-between}.grid{grid-template-columns:2fr 1fr}.contact-columns{grid-template-columns:1fr 1fr}}
+    </style>
 </head>
 <body>
-    <h1>holqa</h1>
+    <header>
+        <div class="container nav">
+            <div class="brand">Fisioterapia Vida</div>
+            <nav>
+                <a href="#acerca">Acerca</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div>
+                <h1>Recupera tu bienestar con fisioterapia personalizada</h1>
+                <p>Tratamientos basados en la evidencia, atención cercana y planes adaptados a tus necesidades.</p>
+                <p style="margin-top:12px"><a class="cta" href="#contacto">Pedir cita</a></p>
+            </div>
+            <div style="text-align:right">
+                <div style="font-weight:700">Teléfono</div>
+                <div style="color:var(--muted);margin-top:6px">+34 600 000 000</div>
+                <div style="margin-top:18px;font-size:.95rem;color:var(--muted)">Horario: Lun-Vie 9:00–19:00</div>
+            </div>
+        </section>
+
+        <section id="acerca" class="grid">
+            <article class="card">
+                <h2>Quiénes somos</h2>
+                <p style="color:var(--muted)">Somos una clínica pequeña de fisioterapia dedicada a la recuperación funcional y el alivio del dolor. Nuestro equipo atiende con un enfoque integral: valoración individual, tratamiento manual, ejercicio terapéutico y educación para prevenir recaídas. Trabajamos con pacientes de todas las edades y adaptamos las sesiones a cada caso.</p>
+
+                <h3 style="margin-top:16px">Nuestro enfoque</h3>
+                <ul style="margin:8px 0 0 18px;color:var(--muted)">
+                    <li>Valoración personalizada</li>
+                    <li>Técnicas manuales y terapias activas</li>
+                    <li>Planes de rehabilitación a medida</li>
+                    <li>Sesiones presenciales y teleconsulta (según disponibilidad)</li>
+                </ul>
+            </article>
+
+            <aside class="card">
+                <h2 id="servicios">Servicios</h2>
+                <p style="color:var(--muted)">Fisioterapia musculoesquelética, rehabilitación post-operatoria, tratamiento de dolor crónico, reeducación postural y prevención de lesiones.</p>
+                <h3 style="margin-top:12px">Dirección</h3>
+                <p style="color:var(--muted);margin:6px 0">C/ Ejemplo 12, 28000, Ciudad</p>
+                <h3 style="margin-top:8px">Email</h3>
+                <p style="color:var(--muted);margin:6px 0">contacto@fisioterapiavida.com</p>
+            </aside>
+        </section>
+
+        <section id="contacto" style="margin-top:24px">
+            <div class="card">
+                <h2>Contacto</h2>
+                <p style="color:var(--muted)">Usa el formulario para enviarnos un mensaje o reserva tu cita llamando al número. El formulario abrirá tu cliente de correo para enviar el mensaje (en equipos sin cliente instalado, copia el email arriba).</p>
+
+                <form id="contactForm" class="contact-columns" onsubmit="return handleSubmit(event)">
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+
+                        <label for="email" style="margin-top:12px">Email</label>
+                        <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+
+                        <label for="phone" style="margin-top:12px">Teléfono (opcional)</label>
+                        <input id="phone" name="phone" type="text" placeholder="+34 600 000 000">
+                    </div>
+
+                    <div>
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Describe brevemente tu motivo de consulta" required></textarea>
+
+                        <div style="display:flex;gap:8px;margin-top:12px;align-items:center">
+                            <button class="btn" type="submit">Enviar mensaje</button>
+                            <button type="button" onclick="fillSample()" style="background:#e6eef8;border-radius:8px;padding:8px 12px;border:none;cursor:pointer">Ejemplo</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="formNotice" style="margin-top:12px;color:var(--muted)"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            © <span id="year"></span> Fisioterapia Vida — Todos los derechos reservados
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function validateEmail(email){
+            return /\S+@\S+\.\S+/.test(email);
+        }
+
+        function handleSubmit(e){
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            const notice = document.getElementById('formNotice');
+            notice.textContent = '';
+
+            if(!name || !email || !message){
+                notice.textContent = 'Por favor, completa los campos obligatorios.';
+                return false;
+            }
+            if(!validateEmail(email)){
+                notice.textContent = 'Introduce un email válido.';
+                return false;
+            }
+
+            // Construir mailto (abre cliente de correo del usuario)
+            const to = 'contacto@fisioterapiavida.com';
+            const subject = encodeURIComponent('Contacto web - ' + name);
+            let body = 'Nombre: ' + name + '\nEmail: ' + email + '\n';
+            if(phone) body += 'Teléfono: ' + phone + '\n';
+            body += '\nMensaje:\n' + message + '\n';
+
+            const mailto = `mailto:${to}?subject=${subject}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailto;
+
+            // Mostrar instrucción en caso de que el cliente no abra
+            setTimeout(()=>{
+                notice.textContent = 'Si no se abre tu cliente de correo, por favor envía un email a contacto@fisioterapiavida.com';
+            }, 500);
+
+            return false;
+        }
+
+        function fillSample(){
+            document.getElementById('name').value = 'María Pérez';
+            document.getElementById('email').value = 'maria@example.com';
+            document.getElementById('phone').value = '+34 600 111 222';
+            document.getElementById('message').value = 'Quisiera información sobre rehabilitación de hombro y disponibilidad para una primera consulta.';
+        }
+    </script>
 </body>
 </html>
