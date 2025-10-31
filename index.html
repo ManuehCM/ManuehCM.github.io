@@ -1,203 +1,218 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FisioActive — Fisioterapia y bienestar</title>
-        <meta name="description" content="FisioActive - Clínica de fisioterapia. Fisioterapia deportiva, masajes terapéuticos y rehabilitación postural.">
-        
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
-        
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <header class="site-header">
-            <div class="container header-inner">
-                <div class="brand">FisioActive</div>
-                <nav class="main-nav" aria-label="Navegación principal">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#mapa-dolor">Mapa de Dolor</a>
-                    <a href="#equipo">Equipo</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-                <div class="header-actions">
-                    <a href="#contacto" class="btn-primary btn-small" id="headerCitaBtn">Pide tu cita</a>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FisioActive — Fisioterapia y bienestar</title>
+    <meta name="description"
+        content="FisioActive - Clínica de fisioterapia. Fisioterapia deportiva, masajes terapéuticos y rehabilitación postural.">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">FisioActive</div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#mapa-dolor">Mapa de Dolor</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#contacto" class="btn-primary btn-small" id="headerCitaBtn">Pide tu cita</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Recupera tu movimiento. Mejora tu vida.</h1>
+                <p class="lead">Tratamientos personalizados en fisioterapia deportiva, masajes terapéuticos y
+                    rehabilitación postural.</p>
+                <div class="hero-actions">
+                    <button id="bookBtn" class="btn-primary">Pide tu cita</button>
+                    <a class="btn-ghost" href="#servicios">Nuestros servicios</a>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section id="inicio" class="hero">
-                <div class="hero-overlay"></div>
-                <div class="container hero-content">
-                    <h1>Recupera tu movimiento. Mejora tu vida.</h1>
-                    <p class="lead">Tratamientos personalizados en fisioterapia deportiva, masajes terapéuticos y rehabilitación postural.</p>
-                    <div class="hero-actions">
-                        <button id="bookBtn" class="btn-primary">Pide tu cita</button>
-                        <a class="btn-ghost" href="#servicios">Nuestros servicios</a>
+        <section id="servicios" class="section container">
+            <h2 class="section-title">Servicios</h2>
+            <div class="cards">
+                <article class="card" data-animate="fade-in-up">
+                    <div class="icon">
+                        <i class="ph-bold ph-person-simple-run"></i>
                     </div>
-                </div>
-            </section>
+                    <h3>Fisioterapia deportiva</h3>
+                    <p>Prevención y tratamiento de lesiones deportivas, readaptación y programas de regreso a la
+                        actividad.</p>
+                </article>
 
-            <section id="servicios" class="section container">
-                <h2 class="section-title">Servicios</h2>
-                <div class="cards">
-                    <article class="card" data-animate="fade-in-up">
-                        <div class="icon">
-                            <i class="ph-bold ph-person-simple-run"></i>
-                        </div>
-                        <h3>Fisioterapia deportiva</h3>
-                        <p>Prevención y tratamiento de lesiones deportivas, readaptación y programas de regreso a la actividad.</p>
-                    </article>
-
-                    <article class="card" data-animate="fade-in-up" style="--animation-delay: 100ms;">
-                        <div class="icon">
-                            <i class="ph-bold ph-hand-heart"></i>
-                        </div>
-                        <h3>Masajes terapéuticos</h3>
-                        <p>Masaje miofascial, liberación de tejidos y técnicas para reducir el dolor y mejorar la movilidad.</p>
-                    </article>
-
-                    <article class="card" data-animate="fade-in-up" style="--animation-delay: 200ms;">
-                        <div class="icon">
-                           <i class="ph-bold ph-person-simple-walk"></i>
-                        </div>
-                        <h3>Rehabilitación postural</h3>
-                        <p>Valoración postural y planes de ejercicio para corregir patrones y prevenir recaídas.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="equipo" class="section container">
-                <h2 class="section-title">Nuestro equipo</h2>
-                <div class="team-grid">
-                    <div class="team-member card" data-animate="fade-in-up">
-                        <img class="avatar" src="https://via.placeholder.com/100/2f855a/FFFFFF?text=Ana" alt="Foto de Ana López">
-                        <h4>Ana López</h4>
-                        <p class="muted">Fisioterapeuta especialista en deporte</p>
+                <article class="card" data-animate="fade-in-up" style="--animation-delay: 100ms;">
+                    <div class="icon">
+                        <i class="ph-bold ph-hand-heart"></i>
                     </div>
-
-                    <div class="team-member card" data-animate="fade-in-up" style="--animation-delay: 100ms;">
-                        <img class="avatar" src="https://via.placeholder.com/100/2f855a/FFFFFF?text=Marcos" alt="Foto de Marcos Ruiz">
-                        <h4>Marcos Ruiz</h4>
-                        <p class="muted">Fisioterapeuta y terapeuta manual</p>
-                    </div>
-
-                    <div class="team-member card" data-animate="fade-in-up" style="--animation-delay: 200ms;">
-                        <img class="avatar" src="https://via.placeholder.com/100/2f855a/FFFFFF?text=Sara" alt="Foto de Sara Fernández">
-                        <h4>Sara Fernández</h4>
-                        <p class="muted">Especialista en rehabilitación postural</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="mapa-dolor" class="section section-bg">
-                <div class="container">
-                    <h2 class="section-title">¿Dónde te duele?</h2>
-                    <p class="lead" style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
-                        Selecciona un punto en el mapa para ver los tratamientos que ofrecemos para esa zona.
+                    <h3>Masajes terapéuticos</h3>
+                    <p>Masaje miofascial, liberación de tejidos y técnicas para reducir el dolor y mejorar la movilidad.
                     </p>
-                    <div class="interactive-map-area">
-                        <div id="hotspot-details" class="card" data-animate="fade-in-up">
-                            <h4><i class="ph ph-info"></i> Haz clic en un punto</h4>
-                            <p class="muted">Selecciona una de las zonas marcadas para obtener más información sobre nuestros servicios especializados.</p>
-                        </div>
-                        
-                        <div class="body-map-container" data-animate="fade-in-up" style="--animation-delay: 200ms;">
-                            <img src="https://via.placeholder.com/400x600/FFFFFF/CCCCCC?text=Silueta+Corporal" alt="Mapa corporal interactivo" class="body-map-image">
-                            
-                            <button class="hotspot" data-spot="hombro" style="top: 25%; left: 35%;" aria-label="Información sobre dolor de hombro"></button>
-                            <button class="hotspot" data-spot="espalda" style="top: 40%; left: 48%;" aria-label="Información sobre dolor de espalda"></button>
-                            <button class="hotspot" data-spot="rodilla" style="top: 68%; left: 40%;" aria-label="Información sobre dolor de rodilla"></button>
-                        </div>
+                </article>
+
+                <article class="card" data-animate="fade-in-up" style="--animation-delay: 200ms;">
+                    <div class="icon">
+                        <i class="ph-bold ph-person-simple-walk"></i>
                     </div>
+                    <h3>Rehabilitación postural</h3>
+                    <p>Valoración postural y planes de ejercicio para corregir patrones y prevenir recaídas.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="equipo" class="section container">
+            <h2 class="section-title">Nuestro equipo</h2>
+            <div class="team-grid">
+                <div class="team-member card" data-animate="fade-in-up">
+                    <img class="avatar" src="https://i.pravatar.cc/100?u=ana" alt="Foto de Ana López">
+                    <h4>Ana López</h4>
+                    <p class="muted">Fisioterapeuta especialista en deporte</p>
                 </div>
-            </section>
-            <section id="testimonios" class="section">
-                <div class="container">
-                    <h2 class="section-title">Qué dicen nuestros pacientes</h2>
-                    <div class="testimonial-grid">
-                        <blockquote class="card" data-animate="fade-in-up">
-                            <p>"Un trato excelente y muy profesional. Fui con un dolor de espalda que arrastraba meses y en pocas sesiones estoy como nuevo. 100% recomendable."</p>
-                            <footer>— Carlos G.</footer>
-                        </blockquote>
-                        <blockquote class="card" data-animate="fade-in-up" style="--animation-delay: 100ms;">
-                            <p>"Ana es una magnífica profesional. Entendió mi lesión deportiva desde el primer minuto y el plan de recuperación ha sido perfecto."</p>
-                            <footer>— Laura M.</footer>
-                        </blockquote>
-                    </div>
+
+                <div class="team-member card" data-animate="fade-in-up" style="--animation-delay: 100ms;">
+                    <img class="avatar" src="https://i.pravatar.cc/100?u=marcos" alt="Foto de Marcos Ruiz">
+                    <h4>Marcos Ruiz</h4>
+                    <p class="muted">Fisioterapeuta y terapeuta manual</p>
                 </div>
-            </section>
 
-
-            <section id="contacto" class="section container">
-                <h2 class="section-title">Contacto</h2>
-                <div class="contact-grid">
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
-                        <label for="nombre">Nombre</label>
-                        <input id="nombre" name="nombre" type="text" required>
-
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" required>
-
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                        <div class="form-actions">
-                            <button type="submit" class="btn-primary">Enviar mensaje</button>
-                        </div>
-                        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
-                    </form>
-
-                    <aside class="contact-info card">
-                        <h3>FisioActive</h3>
-                        <p class="muted">C/ Salud 10, 28000 — Ciudad</p>
-                        <p class="muted">Tel: +34 600 123 456</p>
-                        <p class="muted">Email: contacto@fisioactive.com</p>
-                        <p class="muted">Lunes a Viernes<br>9:00 - 14:00 y 16:00 - 20:00</p>
-                    </aside>
-                </div>
-            </section>
-        </main>
-
-        <footer class="site-footer-pro">
-             <div class="container footer-grid">
-                <div class="footer-brand">
-                    <h4>FisioActive</h4>
-                    <p class="muted">Recupera tu movimiento. Mejora tu vida.</p>
-                </div>
-                <div class="footer-links">
-                    <h5>Navegación</h5>
-                    <a href="#inicio">Inicio</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#equipo">Equipo</a>
-                    <a href="#contacto">Contacto</a>
-                </div>
-                <div class="footer-contact">
-                    <h5>Contacto</h5>
-                    <p class="muted">
-                        C/ Salud 10, 28000 — Ciudad<br>
-                        contacto@fisioactive.com<br>
-                        +34 600 123 456
-                    </p>
-                </div>
-                <div class="footer-legal">
-                    <h5>Legal</h5>
-                    <a href="#">Política de Privacidad</a>
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Política de Cookies</a>
+                <div class="team-member card" data-animate="fade-in-up" style="--animation-delay: 200ms;">
+                    <img class="avatar" src="https://i.pravatar.cc/100?u=sara" alt="Foto de Sara Fernández">
+                    <h4>Sara Fernández</h4>
+                    <p class="muted">Especialista en rehabilitación postural</p>
                 </div>
             </div>
-            <div class="container footer-bottom">
-                © 2025 FisioActive — Todos los derechos reservados
-            </div>
-        </footer>
+        </section>
 
-        <button id="backToTopBtn" title="Volver arriba" aria-label="Volver arriba">
-            <i class="ph ph-arrow-up"></i>
-        </button>
-        
-    </body>
+        <section id="mapa-dolor" class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">¿Dónde te duele?</h2>
+                <p class="lead" style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
+                    Selecciona un punto en el mapa para ver los tratamientos que ofrecemos para esa zona.
+                </p>
+                <div class="interactive-map-area">
+                    <div id="hotspot-details" class="card" data-animate="fade-in-up">
+                        <h4><i class="ph ph-info"></i> Haz clic en un punto</h4>
+                        <p class="muted">Selecciona una de las zonas marcadas para obtener más información sobre
+                            nuestros servicios especializados.</p>
+                    </div>
+
+                    <div class="body-map-container" data-animate="fade-in-up" style="--animation-delay: 200ms;">
+
+                        <img src="https://i.imgur.com/gsvA2xK.png" alt="Mapa corporal interactivo"
+                            class="body-map-image">
+
+                        <button class="hotspot" data-spot="hombro" style="top: 25%; left: 35%;"
+                            aria-label="Información sobre dolor de hombro"></button>
+                        <button class="hotspot" data-spot="espalda" style="top: 40%; left: 48%;"
+                            aria-label="Información sobre dolor de espalda"></button>
+                        <button class="hotspot" data-spot="rodilla" style="top: 68%; left: 40%;"
+                            aria-label="Información sobre dolor de rodilla"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonios" class="section">
+            <div class="container">
+                <h2 class="section-title">Qué dicen nuestros pacientes</h2>
+                <div class="testimonial-grid">
+                    <blockquote class="card" data-animate="fade-in-up">
+                        <p>"Un trato excelente y muy profesional. Fui con un dolor de espalda que arrastraba meses y en
+                            pocas sesiones estoy como nuevo. 100% recomendable."</p>
+                        <footer>— Carlos G.</footer>
+                    </blockquote>
+                    <blockquote class="card" data-animate="fade-in-up" style="--animation-delay: 100ms;">
+                        <p>"Ana es una magnífica profesional. Entendió mi lesión deportiva desde el primer minuto y el
+                            plan de recuperación ha sido perfecto."</p>
+                        <footer>— Laura M.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contacto" class="section container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-grid">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Enviar mensaje</button>
+                    </div>
+                    <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+
+                <aside class="contact-info card">
+                    <h3>FisioActive</h3>
+                    <p class="muted">C/ Salud 10, 28000 — Ciudad</p>
+                    <p class="muted">Tel: +34 600 123 456</p>
+                    <p class="muted">Email: contacto@fisioactive.com</p>
+                    <p class="muted">Lunes a Viernes<br>9:00 - 14:00 y 16:00 - 20:00</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-pro">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>FisioActive</h4>
+                <p class="muted">Recupera tu movimiento. Mejora tu vida.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navegación</h5>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-contact">
+                <h5>Contacto</h5>
+                <p class="muted">
+                    C/ Salud 10, 28000 — Ciudad<br>
+                    contacto@fisioactive.com<br>
+                    +34 600 123 456
+                </p>
+            </div>
+            <div class="footer-legal">
+                <h5>Legal</h5>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            © 2025 FisioActive — Todos los derechos reservados
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" title="Volver arriba" aria-label="Volver arriba">
+        <i class="ph ph-arrow-up"></i>
+    </button>
+
+</body>
+
 </html>
