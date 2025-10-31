@@ -66,66 +66,6 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, A
 .testimonial-grid blockquote p{font-style:italic;font-size:1.1rem;margin:0 0 12px;color:#333}
 .testimonial-grid blockquote footer{font-weight:600;color:var(--green-700)}
 
-/* ---------------------------------- */
-/* NUEVOS ESTILOS: MAPA DE DOLOR      */
-/* ---------------------------------- */
-.interactive-map-area {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.body-map-container {
-  position: relative;
-  max-width: 400px; /* Ancho de tu imagen */
-  margin: 0 auto;
-}
-.body-map-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.hotspot {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background-color: rgba(47, 133, 90, 0.8); /* Verde semi-transparente */
-  border: 2px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transform: translate(-50%, -50%); /* Centra el punto */
-  transition: all 0.2s ease;
-  z-index: 2;
-  /* Animación de pulso */
-  animation: pulse 2s infinite;
-}
-.hotspot:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-  background-color: var(--green-700);
-}
-/* Keyframes para el pulso */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(47, 133, 90, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(47, 133, 90, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(47, 133, 90, 0); }
-}
-
-#hotspot-details {
-  background: var(--bg);
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-#hotspot-details h4 {
-  margin-top: 0;
-  color: var(--green-700);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-#hotspot-details h4 i {
-  font-size: 1.2rem;
-}
-
 
 /* Contact */
 .contact-grid{display:grid;grid-template-columns:1fr;gap:24px}

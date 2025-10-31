@@ -99,35 +99,6 @@
             </div>
         </section>
 
-<section id="mapa-dolor" class="section section-bg">
-    <div class="container">
-        <h2 class="section-title">¿Dónde te duele?</h2>
-        <p class="lead" style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
-            Selecciona un punto en el mapa para ver los tratamientos que ofrecemos para esa zona.
-        </p>
-        <div class="interactive-map-area">
-            <div id="hotspot-details" class="card" data-animate="fade-in-up">
-                <h4><i class="ph ph-info"></i> Haz clic en un punto</h4>
-                <p class="muted">Selecciona una de las zonas marcadas para obtener más información sobre nuestros servicios especializados.</p>
-            </div>
-            
-            <div class="body-map-container" data-animate="fade-in-up" style="--animation-delay: 200ms;">
-                
-                <svg 
-                   xmlns="http://www.w3.org/2000/svg" 
-                   viewBox="0 0 350 780" 
-                   class="body-map-image"
-                   style="fill: #e0e0e0;">
-                  <path d="M174.9,78.2c-21.3,0-38.6-17.3-38.6-38.6C136.3,17.3,153.6,0,174.9,0s38.6,17.3,38.6,38.6 C213.5,60.9,196.2,78.2,174.9,78.2z M224.2,85.1c-12.7,0-23,10.3-23,23s10.3,23,23,23c12.7,0,23-10.3,23-23S236.9,85.1,224.2,85.1z M125.6,85.1c-12.7,0-23,10.3-23,23s10.3,23,23,23c12.7,0,23-10.3,23-23S138.3,85.1,125.6,85.1z M282.8,171.2c-4.4-2-9.4-2.8-14.7-2.8 c-10,0-19.4,3.2-27,8.6l-22.1,15.8l-18.4-44.4c-3.1-7.4-10-12.8-18.3-12.8h-11.4c-11.3,0-20.9,8.1-22.7,19.1L126.8,300.9 c-0.6,3.6,1.9,6.8,5.6,6.8c3,0,5.6-2.1,6.1-5.1l17.7-106.3l12.4,56.5c-4.8,3.9-8.4,9.2-10,15.5l-20.7,80.9 c-2.1,8.3,2.4,16.8,10.7,18.9c2,0.5,4,0.7,6,0.7c6.2,0,12.1-3.2,15.4-8.6l20.4-33.1l11.2,168.1c0.3,4.6,4.1,8.2,8.7,8.2 c4.6,0,8.4-3.6,8.7-8.2l11.2-168.1l20.4,33.1c3.3,5.4,9.2,8.6,15.4,8.6c2,0,4-0.2,6-0.7c8.3-2.1,12.8-10.6,10.7-18.9l-20.7-80.9 c-1.7-6.3-5.2-11.5-10-15.5l12.4-56.5l17.7,106.3c0.5,3,3.1,5.1,6.1,5.1c3.7,0,6.2-3.2,5.6-6.8L233.1,154.2 c-1.8-11-11.4-19.1-22.7-19.1h-11.4c-8.2,0-15.1,5.4-18.3,12.8l-18.4,44.4l-22.1-15.8c-7.6-5.4-17-8.6-27-8.6 c-5.3,0-10.3,0.8-14.7,2.8c-10.9,4.9-17.7,15.6-17.7,27.4c0,10.4,5.4,19.6,13.8,24.8l20.7,12.8c-2,3.3-3.2,7.1-3.2,11.2 c0,10.4,8.4,18.8,18.8,18.8s18.8-8.4,18.8-18.8c0-4.1-1.3-7.9-3.2-11.2l20.7-12.8c8.3-5.2,13.8-14.4,13.8-24.8 C215.1,176,206.8,171,199.1,171z M145.8,198.6c8.3-5.2,13.8-14.4,13.8-24.8c0-11.8-6.9-22.5-17.7-27.4 c-10.9,4.9-17.7,15.6-17.7,27.4c0,10.4,5.4,19.6,13.8,24.8l20.7,12.8c-2,3.3-3.2,7.1-3.2,11.2c0,10.4,8.4,18.8,18.8,18.8 s18.8-8.4,18.8-18.8c0-4.1-1.3-7.9-3.2-11.2l20.7-12.8c8.3-5.2,13.8-14.4,13.8-24.8c-7.7-0.1-16,4.9-17.7,15.6 c-2.1,12.8,2.4,25.6,10.7,33.9c-8.3,8.3-13.8,19.7-13.8,32.5c0,12.8,5.4,24.2,13.8,32.5c-8.3,8.3-13.8,19.7-13.8,32.5 c0,12.8,5.4,24.2,13.8,32.5c-8.3,8.3-13.8,19.7-13.8,32.5c0,12.8,5.4,24.2,13.8,32.5c-8.3,8.3-13.8,19.7-13.8,32.5 c0,12.8,5.4,24.2,13.8,32.5c-8.3,8.3-13.8,19.7-13.8,32.5c0,12.8,5.4,24.2,13.8,32.5c-8.3,8.3-13.8,19.7-13.8,32.5 c0,12.8,5.4,24.2,13.8,32.5c-8.3,8.3-13.8,19.7-13.8,32.5c0,23.3,18.9,42.2,42.2,42.2s42.2-18.9,42.2-42.2 c0-12.8-5.4-24.2-13.8-32.5c8.3-8.3,13.8-19.7,13.8-32.5c0-12.8-5.4-24.2-13.8-32.5c8.3-8.3,13.8-19.7,13.8-32.5 c0-12.8-5.4-24.2-13.8-32.5c8.3-8.3,13.8-19.7,13.8-32.5c0-12.8-5.4-24.2-13.8-32.5c8.3-8.3,13.8-19.7,13.8-32.5 c0-12.8-5.4-24.2-13.8-32.5c8.3-8.3,13.8-19.7,13.8-32.5c0-12.8-5.4-24.2-13.8-32.5c8.3-8.3,13.8-19.7,13.8-32.5 c-1.8-10.7-10-15.7-17.7-15.6c0,10.4,5.4,19.6,13.8,24.8l20.7,12.8c-2,3.3-3.2,7.1-3.2,11.2c0,10.4,8.4,18.8,18.8,18.8 s18.8-8.4,18.8-18.8c0-4.1-1.3-7.9-3.2-11.2l20.7-12.8c8.3-5.2,13.8-14.4,13.8-24.8C300.6,186.2,293.7,175.5,282.8,171.2z"/>
-                </svg>
-                
-                <button class="hotspot" data-spot="hombro" style="top: 22%; left: 35%;" aria-label="Información sobre dolor de hombro"></button>
-                <button class="hotspot" data-spot="espalda" style="top: 40%; left: 48%;" aria-label="Información sobre dolor de espalda"></button>
-                <button class="hotspot" data-spot="rodilla" style="top: 70%; left: 42%;" aria-label="Información sobre dolor de rodilla"></button>
-            </div>
-        </div>
-    </div>
-</section>
      <section id="testimonios" class="section section-bg"> <div class="container">
         <h2 class="section-title">Qué dicen nuestros pacientes</h2>
         
@@ -137,7 +108,7 @@
                 <div class="google-review-header">
                     <img src="https://i.pravatar.cc/40?u=carlos" alt="Avatar de Carlos G." class="google-review-avatar">
                     <div class="google-review-author">
-                        <span class="author-name">Carlos G.</span>
+                        <span class="author-name">Laura L.</span>
                         <span class="review-timestamp">hace 2 semanas</span>
                     </div>
                 </div>
@@ -157,7 +128,7 @@
                 <div class="google-review-header">
                     <img src="https://i.pravatar.cc/40?u=laura" alt="Avatar de Laura M." class="google-review-avatar">
                     <div class="google-review-author">
-                        <span class="author-name">Laura M.</span>
+                        <span class="author-name">Carlos G.</span>
                         <span class="review-timestamp">hace 1 mes</span>
                     </div>
                 </div>
@@ -199,7 +170,7 @@
 
                 <aside class="contact-info card">
                     <h3>FisioActive</h3>
-                    <p class="muted">C/ Salud 10, 28000 — Ciudad</p>
+                    <p class="muted">C/ Salud 10, 18006 — Granada</p>
                     <p class="muted">Tel: +34 600 123 456</p>
                     <p class="muted">Email: contacto@fisioactive.com</p>
                     <p class="muted">Lunes a Viernes<br>9:00 - 14:00 y 16:00 - 20:00</p>
@@ -224,7 +195,7 @@
             <div class="footer-contact">
                 <h5>Contacto</h5>
                 <p class="muted">
-                    C/ Salud 10, 28000 — Ciudad<br>
+                    C/ Salud 10, 18006 — Granada<br>
                     contacto@fisioactive.com<br>
                     +34 600 123 456
                 </p>
