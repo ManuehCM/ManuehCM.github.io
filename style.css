@@ -227,3 +227,67 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, A
   .hero{min-height:420px}
   .hero h1{font-size:2.6rem}
 }
+/* ---------------------------------- */
+/* NUEVOS ESTILOS: GOOGLE REVIEWS      */
+/* ---------------------------------- */
+
+/* Anulamos los estilos antiguos del blockquote */
+.testimonial-grid blockquote {
+  display: none;
+}
+
+/* Nuevos estilos para la tarjeta de opinión */
+.google-review.card {
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.google-review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.google-review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.google-review-author {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.google-review-author .author-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.google-review-author .review-timestamp {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.google-review-rating {
+  margin-bottom: 12px;
+  color: #fbbc05; /* Color estrella de Google */
+  font-size: 0.9rem; /* Tamaño de las estrellas */
+}
+
+/* Rellena los iconos de estrella (requiere Phosphor Icons) */
+.google-review-rating i.ph-star {
+  font-size: 1rem; /* Asegúrate de que el tamaño es visible */
+}
+
+.google-review-body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
