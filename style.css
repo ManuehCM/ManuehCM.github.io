@@ -1,23 +1,55 @@
-/* style.css — diseño moderno, limpio y responsivo para FisioActive */
 :root{
   --green-700:#2f855a;
   --green-300:#9ae6b4;
   --bg:#f7fafc;
+  --bg-alt: #ffffff; /* Fondo alternativo para secciones */
   --card:#ffffff;
   --text:#1a202c;
   --muted:#6b7280;
   --radius:12px;
+  --header-height: 70px; /* Variable para la altura del header */
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+
+/* Reset para scroll-padding */
+html {
+  scroll-padding-top: var(--header-height); 
+  scroll-behavior: smooth;
+}
+
+body{margin:0;font-family:Inter, system_ui, -apple_system, 'Segoe UI', Roboto, Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
-/* Header */
-.site-header{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,0.04)}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
+/* Header (MEJORADO) */
+.site-header{
+  background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  /* --- ESTILOS STICKY --- */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height: 100%;
+}
 .brand{font-weight:700;color:var(--green-700);font-size:1.25rem}
-.main-nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+.main-nav{display: none;} /* Oculto en móvil, visible en desktop */
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-weight:600;font-size: 0.95rem;}
 .main-nav a:hover{color:var(--green-700)}
+
+.header-actions {
+  display: flex;
+}
+.btn-small {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
 
 /* Hero */
 .hero{position:relative;padding:64px 0;display:flex;align-items:center;min-height:320px}
@@ -26,41 +58,154 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, A
 .hero h1{font-size:2rem;margin:0 0 12px}
 .lead{margin:0;color:var(--muted)}
 .hero-actions{margin-top:18px;display:flex;gap:12px}
-.btn-primary{background:var(--green-700);color:#fff;padding:12px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
-.btn-primary:hover{opacity:0.95}
+.btn-primary{background:var(--green-700);color:#fff;padding:12px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700; text-decoration: none;}
+.btn-primary:hover{opacity:0.9}
 .btn-ghost{display:inline-flex;align-items:center;padding:10px 16px;border-radius:10px;background:transparent;border:2px solid rgba(47,133,90,0.08);color:var(--green-700);text-decoration:none;font-weight:700}
 
 /* Sections */
 .section{padding:48px 0}
-.section-title{font-size:1.5rem;margin:0 0 18px}
-.cards{display:grid;grid-template-columns:1fr;gap:18px}
-.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-.card h3{margin-top:8px;margin-bottom:8px}
-.icon{font-size:28px}
+.section-title{font-size:1.5rem;margin:0 0 24px; text-align: center;}
+.section-bg { background: var(--bg-alt); }
 
-/* Team */
+.cards{display:grid;grid-template-columns:1fr;gap:18px}
+.card{background:var(--card);padding:24px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.card h3{margin-top:8px;margin-bottom:8px}
+
+/* Iconos de Servicios (MEJORADO) */
+.icon{
+  font-size:28px;
+  width: 60px;
+  height: 60px;
+  background: var(--bg);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.icon img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  /* Si usas iconos SVG, puedes estilizarlos así: */
+  /* color: var(--green-700); */
+}
+
+
+/* Team (MEJORADO) */
 .team-grid{display:grid;grid-template-columns:1fr;gap:18px}
-.team-member{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px}
-.avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--green-300),var(--green-700));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px}
+.team-member{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px; text-align: center;}
+.avatar{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit: cover; /* Para que la imagen no se deforme */
+  border: 4px solid var(--bg-alt);
+  box-shadow: 0 4px 10px rgba(16,24,40,0.08);
+}
 .muted{color:var(--muted)}
 
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:1fr;gap:18px}
-.contact-form label{display:block;font-weight:600;margin-bottom:6px}
-.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(16,24,40,0.06);margin-bottom:12px}
-.form-actions{display:flex;justify-content:flex-start}
-.form-message{color:var(--green-700);margin-top:8px}
-.contact-info{padding:18px}
+/* NUEVA SECCIÓN: Testimonios */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.testimonial-grid blockquote {
+  margin: 0;
+  padding: 24px;
+}
+.testimonial-grid blockquote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+  color: #333;
+}
+.testimonial-grid blockquote footer {
+  font-weight: 600;
+  color: var(--green-700);
+}
 
-/* Footer */
-.site-footer{border-top:1px solid rgba(0,0,0,0.04);padding:24px 0;color:var(--muted);text-align:center}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.contact-form label{display:block;font-weight:600;margin-bottom:6px}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(16,24,40,0.1);margin-bottom:12px; font-family: inherit; font-size: 1rem;}
+.form-actions{display:flex;justify-content:flex-start}
+.form-message{color:var(--green-700);margin-top:10px; font-weight: 600;}
+.contact-info{padding:24px}
+.contact-info p { line-height: 1.6; }
+
+/* Footer (REEMPLAZADO) */
+.site-footer {
+  /* Ocultamos el footer antiguo */
+  display: none;
+}
+.site-footer-pro {
+  background: var(--bg-alt);
+  border-top: 1px solid rgba(0,0,0,0.04);
+  padding-top: 48px;
+  color: var(--text);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.footer-grid h4 {
+  font-size: 1.1rem;
+  color: var(--green-700);
+  margin: 0 0 12px;
+}
+.footer-grid h5 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.footer-links a, .footer-legal a, .footer-contact p {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+.footer-links a:hover, .footer-legal a:hover {
+  color: var(--green-700);
+}
+.footer-contact p {
+  line-height: 1.6;
+  margin: 0;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.04);
+  padding-top: 24px;
+  margin-top: 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 
 /* Responsive */
 @media(min-width:700px){
+  .main-nav { display: block; } /* Mostramos nav en desktop */
+  .hero{min-height:380px}
   .cards{grid-template-columns:repeat(3,1fr)}
   .team-grid{grid-template-columns:repeat(3,1fr)}
   .contact-grid{grid-template-columns:1fr 340px}
+  .testimonial-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
 }
+
+@media(max-width: 699px) {
+  /* En móvil, el botón "Pide tu cita" del header es el principal */
+  .header-inner { justify-content: space-between; }
+  .main-nav { display: none; } /* Ocultamos nav de texto */
+  .brand { flex-grow: 1; }
+}
+
 
 @media(min-width:1000px){
   .hero{min-height:420px}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-t">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>FisioActive — Fisioterapia y bienestar</title>
         <meta name="description" content="FisioActive - Clínica de fisioterapia. Fisioterapia deportiva, masajes terapéuticos y rehabilitación postural.">
@@ -18,6 +18,9 @@
                     <a href="#equipo">Equipo</a>
                     <a href="#contacto">Contacto</a>
                 </nav>
+                <div class="header-actions">
+                    <a href="#contacto" class="btn-primary btn-small" id="headerCitaBtn">Pide tu cita</a>
+                </div>
             </div>
         </header>
 
@@ -29,7 +32,7 @@
                     <p class="lead">Tratamientos personalizados en fisioterapia deportiva, masajes terapéuticos y rehabilitación postural.</p>
                     <div class="hero-actions">
                         <button id="bookBtn" class="btn-primary">Pide tu cita</button>
-                        <a class="btn-ghost" href="#contacto">Contacto</a>
+                        <a class="btn-ghost" href="#servicios">Nuestros servicios</a>
                     </div>
                 </div>
             </section>
@@ -38,19 +41,25 @@
                 <h2 class="section-title">Servicios</h2>
                 <div class="cards">
                     <article class="card">
-                        <div class="icon">🏃‍♂️</div>
+                        <div class="icon">
+                            <img src="https://via.placeholder.com/48/2f855a/FFFFFF?text=ICON" alt="Icono Fisioterapia deportiva" />
+                        </div>
                         <h3>Fisioterapia deportiva</h3>
                         <p>Prevención y tratamiento de lesiones deportivas, readaptación y programas de regreso a la actividad.</p>
                     </article>
 
                     <article class="card">
-                        <div class="icon">💆‍♀️</div>
+                        <div class="icon">
+                            <img src="https://via.placeholder.com/48/2f855a/FFFFFF?text=ICON" alt="Icono Masajes terapéuticos" />
+                        </div>
                         <h3>Masajes terapéuticos</h3>
                         <p>Masaje miofascial, liberación de tejidos y técnicas para reducir el dolor y mejorar la movilidad.</p>
                     </article>
 
                     <article class="card">
-                        <div class="icon">🧘‍♂️</div>
+                        <div class="icon">
+                           <img src="https://via.placeholder.com/48/2f855a/FFFFFF?text=ICON" alt="Icono Rehabilitación postural" />
+                        </div>
                         <h3>Rehabilitación postural</h3>
                         <p>Valoración postural y planes de ejercicio para corregir patrones y prevenir recaídas.</p>
                     </article>
@@ -61,29 +70,46 @@
                 <h2 class="section-title">Nuestro equipo</h2>
                 <div class="team-grid">
                     <div class="team-member card">
-                        <div class="avatar">A</div>
+                        <img class="avatar" src="https://via.placeholder.com/100/2f855a/FFFFFF?text=Ana" alt="Foto de Ana López">
                         <h4>Ana López</h4>
                         <p class="muted">Fisioterapeuta especialista en deporte</p>
                     </div>
 
                     <div class="team-member card">
-                        <div class="avatar">M</div>
+                        <img class="avatar" src="https://via.placeholder.com/100/2f855a/FFFFFF?text=Marcos" alt="Foto de Marcos Ruiz">
                         <h4>Marcos Ruiz</h4>
                         <p class="muted">Fisioterapeuta y terapeuta manual</p>
                     </div>
 
                     <div class="team-member card">
-                        <div class="avatar">S</div>
+                        <img class="avatar" src="https://via.placeholder.com/100/2f855a/FFFFFF?text=Sara" alt="Foto de Sara Fernández">
                         <h4>Sara Fernández</h4>
                         <p class="muted">Especialista en rehabilitación postural</p>
                     </div>
                 </div>
             </section>
 
+            <section id="testimonios" class="section section-bg">
+                <div class="container">
+                    <h2 class="section-title">Qué dicen nuestros pacientes</h2>
+                    <div class="testimonial-grid">
+                        <blockquote class="card">
+                            <p>"Un trato excelente y muy profesional. Fui con un dolor de espalda que arrastraba meses y en pocas sesiones estoy como nuevo. 100% recomendable."</p>
+                            <footer>— Carlos G.</footer>
+                        </blockquote>
+                        <blockquote class="card">
+                            <p>"Ana es una magnífica profesional. Entendió mi lesión deportiva desde el primer minuto y el plan de recuperación ha sido perfecto."</p>
+                            <footer>— Laura M.</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+
             <section id="contacto" class="section container">
                 <h2 class="section-title">Contacto</h2>
                 <div class="contact-grid">
-                    <form id="contactForm" class="contact-form" novalidate>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
                         <label for="nombre">Nombre</label>
                         <input id="nombre" name="nombre" type="text" required>
 
@@ -104,15 +130,44 @@
                         <p class="muted">C/ Salud 10, 28000 — Ciudad</p>
                         <p class="muted">Tel: +34 600 123 456</p>
                         <p class="muted">Email: contacto@fisioactive.com</p>
+                        <p class="muted">Lunes a Viernes<br>9:00 - 14:00 y 16:00 - 20:00</p>
                     </aside>
                 </div>
             </section>
         </main>
 
-        <footer class="site-footer">
-            <div class="container">
+        <footer class="site-footer-pro">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <h4>FisioActive</h4>
+                    <p class="muted">Recupera tu movimiento. Mejora tu vida.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Navegación</h5>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#equipo">Equipo</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contacto</h5>
+                    <p class="muted">
+                        C/ Salud 10, 28000 — Ciudad<br>
+                        contacto@fisioactive.com<br>
+                        +34 600 123 456
+                    </p>
+                </div>
+                <div class="footer-legal">
+                    <h5>Legal</h5>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="container footer-bottom">
                 © 2025 FisioActive — Todos los derechos reservados
             </div>
         </footer>
+        
     </body>
 </html>
